@@ -17,6 +17,23 @@ function ExibeDados({ resultado, historico }) {
           Preencha os dados e clique em calcular para ver a simulação.
         </div>
       )}
+
+      <h2 className="subtitulo mb-3">Histórico de Simulações</h2>
+
+      {historico.length > 0 ? (
+        <ul className="list-group lista-historico">
+          {historico.map((item, index) => (
+            <li key={index} className="list-group-item item-historico">
+              <span><strong>Valor final:</strong> R$ {item.valorFinal.toFixed(2)}</span>
+              <span><strong>Data/Hora:</strong> {item.dataHora}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="resultado-vazio">
+          Nenhuma simulação realizada até o momento.
+        </div>
+      )}
     </div>
   );
 }

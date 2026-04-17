@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import CapturaDados from './CapturaDados';
 import ExibeDados from './ExibeDados';
 
 function App() {
   const [resultado, setResultado] = useState(null);
+  const [historico, setHistorico] = useState([]);
 
   const calcularInvestimento = ({ valorInicial, aporte, taxa, periodo }) => {
     const valorInicialNumero = Number(valorInicial);
@@ -32,7 +32,13 @@ function App() {
       rentabilidade
     };
 
+    const novoHistorico = {
+      valorFinal: montante,
+      dataHora: new Date().toLocaleString('pt-BR')
+    };
+
     setResultado(novoResultado);
+    setHistorico([novoHistorico, ...historico]);
   };
 
   return (
@@ -49,7 +55,7 @@ function App() {
                 </div>
 
                 <div className="col-12 col-md-6">
-                  <ExibeDados resultado={resultado} historico={[]} />
+                  <ExibeDados resultado={resultado} historico={historico} />
                 </div>
               </div>
             </div>
