@@ -1,1 +1,0 @@
-Richard Kazuo Takada Leal - 2040482422049
