@@ -40,7 +40,7 @@ function CapturaDados({ onCalcular }) {
             value={dados.valorInicial}
             onChange={handleChange}
             className="form-control campo"
-            placeholder="Digite o valor inicial"
+            placeholder="Digite o valor inicial(R$)"
           />
         </div>
 
@@ -52,7 +52,7 @@ function CapturaDados({ onCalcular }) {
             value={dados.aporte}
             onChange={handleChange}
             className="form-control campo"
-            placeholder="Digite o aporte mensal"
+            placeholder="Digite o aporte mensal(R$)"
           />
         </div>
 
@@ -64,7 +64,7 @@ function CapturaDados({ onCalcular }) {
             value={dados.taxa}
             onChange={handleChange}
             className="form-control campo"
-            placeholder="Digite a taxa de juros"
+            placeholder="Digite a taxa de juros (% ao mês)"
           />
         </div>
 
@@ -76,7 +76,7 @@ function CapturaDados({ onCalcular }) {
             value={dados.periodo}
             onChange={handleChange}
             className="form-control campo"
-            placeholder="Digite o período"
+            placeholder="Digite o período (Em meses)"
           />
         </div>
 
