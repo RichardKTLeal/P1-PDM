@@ -20,6 +20,9 @@ function ExibeDados({ resultado, historico }) {
 
       <h2 className="subtitulo mb-3">Histórico de Simulações</h2>
 
+      {/* 👉 NOVO */}
+      <p><strong>Total de simulações:</strong> {historico.length}</p>
+
       {historico.length > 0 ? (
         <ul className="list-group lista-historico">
           {historico.map((item, index) => (
