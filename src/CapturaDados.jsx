@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function CapturaDados() {
+function CapturaDados({ onCalcular }) {
   const [dados, setDados] = useState({
     valorInicial: '',
     aporte: '',
@@ -15,6 +15,7 @@ function CapturaDados() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    onCalcular(dados);
   };
 
   const handleLimpar = () => {
