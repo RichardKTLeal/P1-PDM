@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import CapturaDados from './CapturaDados';
+import ExibeDados from './ExibeDados';
 
 function App() {
   const [resultado, setResultado] = useState(null);
@@ -44,6 +46,10 @@ function App() {
               <div className="row g-4">
                 <div className="col-12 col-md-6">
                   <CapturaDados onCalcular={calcularInvestimento} />
+                </div>
+
+                <div className="col-12 col-md-6">
+                  <ExibeDados resultado={resultado} historico={[]} />
                 </div>
               </div>
             </div>
